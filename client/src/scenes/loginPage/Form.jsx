@@ -66,7 +66,7 @@ const Form = () => {
         formData.append("picturePath", values.picture.name);
 
         const savedUserResponse = await fetch(
-            "http://localhost:3001/auth/register",
+            "https://instaface-bakend.onrender.com/auth/register",
             {
                 method: "POST",
                 body: formData,
@@ -104,7 +104,7 @@ const Form = () => {
 
     const login = async (values, onSubmitProps) => {
         try {
-            const response = await fetch("http://localhost:3001/auth/login", {
+            const response = await fetch("https://instaface-bakend.onrender.com/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(values),

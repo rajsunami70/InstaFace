@@ -41,7 +41,7 @@ const PostWidget = ({
     const primary = palette.primary.main;
 
     const patchLike = async () => {
-        const response = await fetch(`http://localhost:3001/posts/${postId}/like`, {
+        const response = await fetch(`https://instaface-bakend.onrender.com/posts/${postId}/like`, {
             method: "PATCH",
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -76,7 +76,7 @@ const PostWidget = ({
 
     const handleDeletePost = async () => {
         try {
-            const response = await fetch(`http://localhost:3001/posts/${postId}`, {
+            const response = await fetch(`https://instaface-bakend.onrender.com/posts/${postId}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -114,7 +114,7 @@ const PostWidget = ({
                     height="auto"
                     alt="post"
                     style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-                    src={`http://localhost:3001/assets/${picturePath}`}
+                    src={`https://instaface-bakend.onrender.com/assets/${picturePath}`}
                 />
             )}
             <FlexBetween mt="0.25rem">
